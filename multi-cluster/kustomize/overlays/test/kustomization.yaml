@@ -1,4 +1,4 @@
 resources:
-- ../../base
+- ../dev+test
 patches:
 - frontend-deployment.yaml
