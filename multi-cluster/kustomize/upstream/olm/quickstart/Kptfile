@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: quickstart
+upstream:
+    type: git
+    git:
+        commit: 12598080947cfb2a619df8de0f2d7f3efd0c4440
+        repo: https://github.com/operator-framework/operator-lifecycle-manager
+        directory: /deploy/upstream/quickstart
+        ref: master

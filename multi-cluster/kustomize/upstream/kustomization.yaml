@@ -1,0 +1,3 @@
+resources:
+- olm/quickstart/crds.yaml
+- olm/quickstart/olm.yaml

@@ -1,4 +1,5 @@
 resources:
+- ../upstream
 - frontend-deployment.yaml
 - frontend-service.yaml
 - redis-master-deployment.yaml
