@@ -1,0 +1,8 @@
+namespace: fleet-mc-kustomize-dev1-example
+targetCustomizations:
+- name: dev
+  clusterSelector:
+    matchLabels:
+      env: dev
+  kustomize:
+    dir: overlays/dev/dev1

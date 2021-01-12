@@ -1,0 +1,7 @@
+resources:
+- ../../base
+patches:
+- frontend-deployment.yaml
+- frontend-service.yaml
+
+namespace: fleet-mc-kustomize-prod-example

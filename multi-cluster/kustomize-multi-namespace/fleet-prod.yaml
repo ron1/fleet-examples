@@ -1,0 +1,8 @@
+namespace: fleet-mc-kustomize-prod-example
+targetCustomizations:
+- name: prod
+  clusterSelector:
+    matchLabels:
+      env: prod
+  kustomize:
+    dir: overlays/prod

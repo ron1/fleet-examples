@@ -1,0 +1,8 @@
+namespace: fleet-mc-kustomize-test1-example
+targetCustomizations:
+- name: test
+  clusterSelector:
+    matchLabels:
+      env: test
+  kustomize:
+    dir: overlays/test/test2

@@ -1,0 +1,4 @@
+resources:
+- ..
+
+namespace: fleet-mc-kustomize-dev2-example
