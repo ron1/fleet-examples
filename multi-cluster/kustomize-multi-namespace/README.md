@@ -1,7 +1,7 @@
 # Multi-Cluster Kustomize Multi-Namespace Example
 
 This example will deploy the [Kubernetes sample guestbook](https://github.com/kubernetes/examples/tree/master/guestbook/) application
-using kustomize. The app will be deployed into multiple namespaces in multiple environments. A new `fleetFile` GitRepo 
+using kustomize. The app will be deployed into multiple namespaces in multiple environments. A new, optional `fleetFiles` GitRepo 
 configuration property is proposed to implement this functionality.
 
 The application will be customized as follows per environment:
@@ -23,15 +23,12 @@ spec:
   repo: https://github.com/rancher/fleet-examples
   paths:
   - path: multi-cluster/kustomize-multi-namespace
-    fleetFile: fleet-dev-dev1.yaml
-  - path: multi-cluster/kustomize-multi-namespace
-  - fleetFile: fleet-dev-dev2.yaml
-  - path: multi-cluster/kustomize-multi-namespace
-    fleetFile: fleet-test-test1.yaml
-  - path: multi-cluster/kustomize-multi-namespace
-  - fleetFile: fleet-test-test2.yaml
-  - path: multi-cluster/kustomize-multi-namespace
-    fleetFile: fleet-prod.yaml
+    fleetFiles:
+    - fleet-dev-dev1.yaml
+    - fleet-dev-dev2.yaml
+    - fleet-test-test1.yaml
+    - fleet-test-test2.yaml
+    - fleet-prod.yaml
 
   targets:
   - name: dev
