@@ -4,9 +4,10 @@ This example will deploy the [Kubernetes sample guestbook](https://github.com/ku
 packaged as a Helm chart downloaded from a third party source and will modify the helm chart using Kustomize.
 The app will be deployed into the `fleet-mc-helm-kustomize-example` namespace.
 
-The application will be customized as follows per environment:
 
-* Dev clusters: Only the redis leader is deployed and not the followers.
+The application will be customized as follows per environment:
+* All clusters: The front deployment image tag is updated to v5
+* Dev clusters: The front deployment image tag is updated to v6 and only the redis leader is deployed and not the followers
 * Test clusters: Scale the front deployment to 3
 * Prod clusters: Scale the front deployment to 3 and set the service type to LoadBalancer
 

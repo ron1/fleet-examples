@@ -1,0 +1,3 @@
+images:
+- name: gcr.io/google-samples/gb-frontend
+  newTag: v5
